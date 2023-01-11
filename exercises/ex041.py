@@ -6,18 +6,21 @@ ano de nascimento de um atleta e mostre sua categoria, de acordo com a idade:
 - Até 25 anos: SÊNIOR
 - Acima de 25 anos: MASTER'''
 
-nascimento = int(input('Ano do nascimento: '))
 from datetime import date
-atual = date.today().year
-idade = atual - nascimento
-print('O atleta tem {} anos.'.format(idade))
-if idade <= 9:
-    print('Classificação: MIRIM.')
-elif idade < 15:
-    print('Classificação: INFANTIL.')
-elif idade < 20:
-    print('Classificação: JÚNIOR.')
-elif idade < 26:
-    print('Classificação: SÊNIOR.')
+
+birth = int(input('Ano de nascimento: '))
+currentYear = date.today().year
+age = currentYear - birth
+
+print(f'O atleta tem {age} anos.')
+print('Classificação: ', end='')
+if age <= 9:
+    print('MIRIM')
+elif 9 < age <= 14:
+    print('INFANTIL')
+elif 14 < age <= 19:
+    print('JÚNIOR')
+elif 19 < age <= 25:
+    print('SÊNIOR')
 else:
-    print('Classificação: MASTER.')
+    print('MASTER')

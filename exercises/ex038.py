@@ -4,11 +4,12 @@ tela uma mensagem:
 - O segundo valor é maior
 - Não existe valor maior, os dois são iguais'''
 
-primeiro = int(input('Primeiro número: '))
-segundo = int(input('Segundo número: '))
-if primeiro > segundo:
-    print('O PRIMEIRO valor é maior')
-elif primeiro < segundo:
-    print('O SEGUNDO valor é maior')
+firstNumber = int(input('Primeiro número: '))
+secondNumber = int(input('Segundo número: '))
+
+if firstNumber > secondNumber:
+    print('O PRIMEIRO valor é maior.')
+elif firstNumber < secondNumber:
+    print('O SEGUNDO valor é maior.')
 else:
     print('Não existe valor maior, os dois são iguais.')

@@ -2,12 +2,12 @@
 Pergunte o valor da casa, o salário do comprador e em quantos anos ele vai pagar. A prestação mensal não
 pode exceder 30% do salário ou então o empréstimo será negado.'''
 
-valor = float(input('Qual o valor do imóvel? R$'))
-renda = float(input('Qual é o seu salário mensal? R$'))
-prazo = int(input('Em quantos anos deseja pagar? '))
-parcela = valor / (prazo*12)
-print('Para pagar uma casa de R${:.2f} em {} anos a prestação será de R${:.2f}'.format(valor, prazo, parcela))
-if parcela <= renda * 30 / 100:
-    print('Parabéns, seu empréstimo foi aprovado!')
+price = float(input('Valor da casa: R$'))
+wage = float(input('Salário do comprador: R$'))
+time = int(input('Quantos anos de financiamento? '))
+portion = price / (time * 12)
+print(f'Para pagar uma casa de R${price:.2f} em {time} anos a prestação será de R${portion:.2f}.')
+if portion <= 30 / 100 * wage:
+    print('Empréstimo CONCEDIDO!')
 else:
-    print('Infelizmente seu empréstimo não foi aprovado!')
+    print('Empréstimo NEGADO!')
